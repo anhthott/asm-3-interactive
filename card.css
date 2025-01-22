@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('assets/PPEditorialNew-Ultralight.otf') format('woff2'),
+       url('assets/PPEditorialNew-Ultralight.otf') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aston Script';
+  src: url('assets/Aston\ Script.ttf') format('woff2'),
+       url('assets/Aston\ Script.ttf') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Figtree';
+  src: url('assets/Figtree-VariableFont_wght.ttf') format('woff2'),
+       url('assets/Figtree-VariableFont_wght.ttf') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree-Bold';
+  src: url('assets/Figtree-Bold.woff2') format('woff2'),
+       url('assets/Figtree-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Áp dụng animation mà không thay đổi vị trí */
+.fade-in {
+  animation: fade-in-fwd 3s ease-out both; /* Thêm hiệu ứng mượt */
+}
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1130px; /* Set a max-width */
+    height: 35px;
+    text-align: justify;
+    font-size: 20px;
+    color: #000;
+    font-family: 'PP Editorial New';
+    font-weight: 300;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+  
+.back-main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 20px; /* Add padding for smaller screens */
+}
+
+.m-for-muteunmute {
+    display: inline-block;
+}
+
+.brief .random-card-may-make {
+    font-family: 'PP Editorial New';
+    font-weight: 300;
+    
+}
+
+.pressR {
+    width: 245px;
+    height: 24px;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pressR .text-wrapper {
+    width: 245px;
+    font-family: "Figtree-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.shouldDo {
+    position: absolute;
+    width: 34px;
+    height: 24px;
+    top: 30%;
+    left: 25%;
+    font-family: "Figtree-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.shouldNotDo {
+    position: absolute;
+    width: 34px;
+    height: 24px;
+    top: 30%;
+    left: 75%;
+    font-family: "Figtree-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+
+.selection {
+    position: absolute;
+    top: 85%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 44px;
+    background-color: #afaeab;
+    border-radius: 37px;
+    border: 1px solid;
+    border-color: #000000;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .text-wrapper {
+    font-family: 'PP Editorial New', Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center; /* Center text */
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 25px; /* Move text down a bit */
+  }
+  .selection-02 {
+    position: absolute;
+    top: 85%;
+    left: 76%;
+    transform: translate(-50%, -50%);
+    width: 188px;
+    height: 44px;
+    background-color: #afaeab;
+    border-radius: 37px;
+    border: 1px solid;
+    border-color: #000000;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  .text-wrapper-02 {
+    font-family: 'PP Editorial New', Helvetica;
+    font-family: 'PP Editorial New', Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center; /* Center text */
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 25px; /* Move text down a bit */
+  
+  }
+  .label {
+    position: fixed;
+    top: 99%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Figtree-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 14px;
+    text-align: center; /* Center text */
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  

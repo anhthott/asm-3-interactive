@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Message</title>
+    <link rel="stylesheet" href="card.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="backMainPage">
+          <a href="index.html" style="text-decoration: none; color: inherit;">Back to Main Page</a>
+        </div>
+        <div class="m-for-muteunmute">M for Mute/Unmute Music.</div>
+        <div class="brief">
+            <p class="random-card-may-make">
+                //Random card may<br />
+                make you feel better
+                </p>
+      </div>
+    </div>
+      <div class="pressR"><p class="text-wrapper">PRESS R TO GET A CARD.</p></div>
+      <div id="image-container"></div>
+      <div class="shouldDo">DO</div>
+      <div class="shouldNotDo">DON'T</div>
+      <div class="selection"><p class="text-wrapper"><a href="favour.html" style="text-decoration: none; color: inherit;">Can you help me a favour ?</a></p>
+      </div>
+      <div class="selection-02"><p class="text-wrapper-02"><a href="index.html" style="text-decoration: none; color: inherit;">Back To Mainpage</a></p></div>
+      <div class="label"><p>@ project made by Catherine Trinh.</p></div>
+      <audio id="background-music" autoplay loop>
+        <source src="assets/music.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+      <script>
+        function toggleMusic() {
+          const audio = document.getElementById('background-music');
+          audio.muted = !audio.muted;
+        }
+  
+        // Ensure the audio plays automatically after a user interaction
+        document.addEventListener('DOMContentLoaded', () => {
+          const audio = document.getElementById('background-music');
+          audio.play().catch(() => {
+            // Autoplay was prevented, wait for a user interaction to play the audio
+            document.body.addEventListener('click', () => {
+              audio.play();
+            }, { once: true });
+          });
+  
+          // Add event listener for key press to mute/unmute audio
+          document.addEventListener('keydown', (event) => {
+            if (event.key === 'm' || event.key === 'M') {
+              toggleMusic();
+            }
+          });
+        });
+      </script>
+    <video autoplay muted loop id="background-video">
+        <source src="assets/bg-2.mp4" type="video/mp4" />
+      </video>
+      <script src="sketch2.js"></script>
+
+</body>
+</html>

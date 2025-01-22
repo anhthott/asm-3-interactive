@@ -1,0 +1,346 @@
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('assets/PPEditorialNew-Ultralight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aston Script';
+  src: url('assets/Aston\ Script.ttf') format('woff2'),
+  src: url('assets/Aston\ Script.ttf') format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Figtree';
+  src: url('assets/Figtree-VariableFont_wght.ttf') format('woff2'),
+       url('assets/Figtree-VariableFont_wght.ttf') format('woff');
+  src: url('assets/Figtree-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Figtree-Bold';
+  src: url('assets/Figtree-Bold.woff2') format('woff2'),
+       url('assets/Figtree-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  transition: opacity 3s ease-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Áp dụng animation mà không thay đổi vị trí */
+.fade-in {
+  animation: fade-in-fwd 3s ease-out both; /* Thêm hiệu ứng mượt */
+}
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.experimental-interactive-websi, .m-for-muteunmute, .there-are-heavy-container {
+  display: inline-block;
+}
+
+.here-are-heavy {
+  font-family: 'PP Editorial New';
+  font-weight: 300;
+}
+
+.there-are-heavy-container {
+  font-family: 'Aston Script';
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 20px; /* Add padding for smaller screens */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1120px; /* Set a max-width */
+  height: 35px;
+  text-align: justify;
+  font-size: 20px;
+  color: #000;
+  font-family: 'PP Editorial New';
+  font-weight: 300;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 20px; /* Add padding for smaller screens */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 430px) {
+  .header {
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Center align elements */
+    padding: 20px; /* Add padding */
+    font-size: 50px; /* Overall font size */
+  }
+
+  .header > div {
+    font-size: 40px; /* Set font-size for child elements */
+    margin-bottom: 10px; /* Add spacing between child elements */
+    text-align: center; /* Center text within child elements */
+  }
+
+  .mainpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .how {
+    font-size: 150px; /* Increase font size for "How" */
+    margin: 0; /* Remove default margin */
+  }
+
+  .hi {
+    font-size: 80px; /* Increase font size for "HI," */
+    margin: 0; /* Remove default margin */
+  }
+
+  .are-you-today-container {
+    text-align: center; /* Center text */
+    font-size: 96px; /* Increase font size for the container */
+  }
+
+  .are-you {
+    margin: 0; /* Ensure no unwanted margin */
+    padding-right: 85px; /* Add right padding */
+  }
+}
+@media (min-width: 900px) {
+  .header {
+    padding-left: 30px; /* Add padding to the right */
+    font-size: 23px; /* Further increase font size */
+  }
+  .mainpage {
+    padding-right: 280px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .header {
+    font-size: 22px; /* Increase font size for larger screens */
+    padding-right: 30px;
+  }
+  .mainpage {
+    padding-right: 150px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .header {
+    font-size: 20px; 
+    padding-left: 50px ;
+  }
+}
+
+@media (min-width: 1800px) {
+  .mainpage {
+    padding-left: 200px;
+  }
+}
+
+
+.how {
+  position: absolute;
+  top: 12px;
+  left: 0px;
+}
+
+.hi {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 36px;
+  letter-spacing: -0.06em;
+  display: inline-block;
+  font-family: 'Figtree';
+  text-align: justify;
+  width: 149px;
+  height: 24px;
+}
+
+.how-parent {
+  position: relative;
+  width: 297px;
+  height: 221px;
+  top: 0;
+  left: 0;
+  text-align: left;
+  font-size: 96px;
+  color: #000;
+  font-family: 'Aston Script';
+  display: flex; /* Use Flexbox to control layout */
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: center; /* Center child elements vertically */
+  align-items: flex-start; /* Align child elements to the start horizontally */
+  box-sizing: border-box; /* Ensure padding is included in the width and height */
+}
+
+.are-you {
+  margin: 0;
+}
+
+.are-you-today-container {
+  position: relative;
+  top : -240px;
+  left: 600px;
+  letter-spacing: -0.06em;
+  text-align: justify;
+  font-size: 96px;
+  color: #000;
+  font-family: 'Figtree';
+}
+
+.mainpage {
+  position: absolute; /* Hoặc fixed nếu muốn luôn giữa trang */
+  top: 55%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  display: flex; /* Sử dụng Flexbox */
+  flex-direction: column; /* Xếp các phần tử con theo cột */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  gap: 20px; /* Khoảng cách giữa .how-parent và .are-you-today-container */
+  text-align: center; /* Căn giữa nội dung text nếu cần */
+}
+
+
+.frame {
+  position: absolute; /* Đặt khung ở vị trí tuyệt đối */
+  top: 75%; /* Căn giữa theo chiều dọc */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%); /* Đưa tâm của phần tử vào đúng giữa */
+  width: 180px;
+  height: 48px;
+  border-radius: 55px;
+  border: 1px solid;
+  border-color: #000000;
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.frame .FEELING-TOUGH {
+  font-family: "Figtree-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 20px;
+  text-align: center; /* Đảm bảo chữ căn giữa trong khung */
+  letter-spacing: -1.6px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.selection {
+  position: absolute;
+  top: 85%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  width: 188px;
+  height: 44px;
+  background-color: #afaeab;
+  border-radius: 37px;
+  border: 1px solid;
+  border-color: #000000;
+  display: none; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.text-wrapper {
+  font-family: 'PP Editorial New', Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center; /* Center text */
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 25px; /* Move text down a bit */
+}
+.selection-02 {
+  position: absolute;
+  top: 85%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 44px;
+  background-color: #afaeab;
+  border-radius: 37px;
+  border: 1px solid;
+  border-color: #000000;
+  display: none; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.text-wrapper-02 {
+  font-family: 'PP Editorial New', Helvetica;
+  font-family: 'PP Editorial New', Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  text-align: center; /* Center text */
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 25px; /* Move text down a bit */
+
+}
+.label {
+  position: fixed;
+  top: 99%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Figtree-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 14px;
+  text-align: center; /* Center text */
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}

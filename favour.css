@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url('assets/Figtree-VariableFont_wght.ttf') format('woff2'),
+         url('assets/Figtree-VariableFont_wght.ttf') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Figtree-Bold';
+    src: url('assets/Figtree-Bold.woff2') format('woff2'),
+         url('assets/Figtree-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Noto Sans Mono ExtraCondensed-Medium';
+    src: url('assets/NotoSansMono-VariableFont_wdth\,wght.ttf') format('woff2'),
+         url('assets/NotoSansMono-VariableFont_wdth\,wght.ttf') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fade-in {
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  #background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1130px; /* Set a max-width */
+    height: 35px;
+    text-align: justify;
+    font-size: 20px;
+    color: #000;
+    font-family: 'PP Editorial New';
+    font-weight: 300;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  
+  .backMainPage {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: auto; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    padding: 10px; /* Add padding if needed */
+    margin: 10px; /* Add margin if needed */
+  }
+  
+  .m-for-muteunmute {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: auto; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    padding: 10px; /* Add padding if needed */
+    margin-left: auto; /* Push to the right */
+  }
+
+.helpMe {
+    height: 96px;
+    position: fixed;
+    width: 352px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Figtree-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+.note {
+    height: 53px;
+    position: fixed;
+    width: 420px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Noto Sans Mono ExtraCondensed-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+.label {
+    position: fixed;
+    top: 99%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Figtree-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 14px;
+    text-align: center; /* Center text */
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }

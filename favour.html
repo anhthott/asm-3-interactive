@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Can you help me?</title>
+    <link rel="stylesheet" href="favour.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch3.js"></script>
+  </head>
+  <body>
+    <div class="header fade-in">
+      <div class="backMainPage"><a href="index.html" style="text-decoration: none; color: inherit;">Back to Main Page</a></div>
+      <div class="m-for-muteunmute">M for Mute/Unmute Music.</div>
+    </div>
+    <div class="helpMe fade-in">
+      <p class="text-wrapper">
+        CAN YOU HELP ME A FAVOUR ?<br />
+        MAKE THIS PICTURE FILL WITH COLORS
+      </p>
+    </div>
+    <div class="note fade-in">"Trust the process.
+      And every time you need a supportive message,
+      feel free to come back."
+    </div>
+    <div class="label"><p>@ project made by Catherine Trinh.</p></div>
+    <video autoplay muted loop id="background-video">
+      <source src="assets/bg-2.mp4" type="video/mp4" />
+    </video>
+    <audio id="background-music" autoplay loop>
+      <source src="assets/music.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <script>
+      function toggleMusic() {
+        const audio = document.getElementById('background-music');
+        audio.muted = !audio.muted;
+      }
+
+      // Ensure the audio plays automatically after a user interaction
+      document.addEventListener('DOMContentLoaded', () => {
+        const audio = document.getElementById('background-music');
+        audio.play().catch(() => {
+          // Autoplay was prevented, wait for a user interaction to play the audio
+          document.body.addEventListener('click', () => {
+            audio.play();
+          }, { once: true });
+        });
+
+        // Add event listener for key press to mute/unmute audio
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'm' || event.key === 'M') {
+            toggleMusic();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
